@@ -376,7 +376,7 @@ img { max-width: 100%; height: auto; }
    ════════════════════════════════════════════════════════════ */
 .hero {
   background: transparent;
-  padding: 72px 0 96px;
+  padding: 48px 0 56px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -395,23 +395,23 @@ img { max-width: 100%; height: auto; }
   gap: 8px;
   background: rgba(255,255,255,0.5);
   border: 1px solid rgba(255,255,255,0.7);
-  padding: 8px 20px;
+  padding: 6px 16px;
   border-radius: var(--radius-full);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--navy);
-  margin-bottom: 28px;
+  margin-bottom: 16px;
 }
 .trust-badge strong { color: var(--primary); }
 
 .hero h1 {
-  font-size: 46px;
+  font-size: 36px;
   font-weight: 800;
   color: var(--navy);
-  max-width: 780px;
-  margin: 0 auto 40px;
-  letter-spacing: -1px;
-  line-height: 1.12;
+  max-width: 700px;
+  margin: 0 auto 24px;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
 }
 
 /* Search bar */
@@ -423,7 +423,7 @@ img { max-width: 100%; height: auto; }
   align-items: center;
   box-shadow: var(--shadow-lg);
   max-width: 700px;
-  margin: 0 auto 40px;
+  margin: 0 auto 28px;
 }
 
 .search-bar input {
@@ -454,7 +454,7 @@ img { max-width: 100%; height: auto; }
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin-bottom: 56px;
+  margin-bottom: 32px;
   flex-wrap: wrap;
 }
 
@@ -509,7 +509,7 @@ img { max-width: 100%; height: auto; }
 .stat-card {
   background: rgba(255,255,255,0.6);
   border: 1px solid rgba(255,255,255,0.8);
-  padding: 24px 16px;
+  padding: 18px 14px;
   border-radius: var(--radius-md);
   text-align: center;
   transition: background 0.3s, border-color 0.3s;
@@ -520,16 +520,16 @@ img { max-width: 100%; height: auto; }
 }
 
 .stat-card h3 {
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--navy);
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 .stat-card p {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-muted);
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
 
@@ -1627,7 +1627,7 @@ img { max-width: 100%; height: auto; }
    ════════════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
   .section-title { font-size: 32px; }
-  .hero h1 { font-size: 38px; }
+  .hero h1 { font-size: 32px; }
   .hero-stats,
   .features-grid,
   .process-grid,
@@ -1666,8 +1666,8 @@ img { max-width: 100%; height: auto; }
   .section-subtitle { font-size: 15px; }
   .section-padding { padding: 44px 0; }
 
-  .hero { padding: 56px 0 72px; }
-  .hero h1 { font-size: 28px; margin-bottom: 28px; }
+  .hero { padding: 40px 0 48px; }
+  .hero h1 { font-size: 26px; margin-bottom: 20px; }
 
   .hero-stats,
   .features-grid,
