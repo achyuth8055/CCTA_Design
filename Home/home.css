@@ -1259,7 +1259,10 @@ img { max-width: 100%; height: auto; }
   color: var(--bg-white);
 }
 
-.blog-carousel { position: relative; }
+.blog-carousel {
+  position: relative;
+  padding: 0 44px;
+}
 
 .blog-carousel-viewport {
   overflow: hidden;
@@ -1349,13 +1352,13 @@ img { max-width: 100%; height: auto; }
 
 /* Blog carousel navigation */
 .blog-carousel-nav {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 12px;
+  display: none;
 }
 
 .blog-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -1373,6 +1376,8 @@ img { max-width: 100%; height: auto; }
   color: var(--bg-white);
   border-color: var(--primary);
 }
+.blog-arrow.prev { left: 0; }
+.blog-arrow.next { right: 0; }
 .blog-arrow svg {
   width: 15px;
   height: 15px;
