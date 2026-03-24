@@ -1,434 +1,828 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Appeal Your Cook County Property Taxes | Residential Tax Appeal Services</title>
-  <meta name="description" content="Reduce your Cook County property tax bill with expert appeal support." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="residential-services.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cook County Tax Appeals LLC uses advanced technology and a 3-tier escalation process to secure maximum property tax reductions. Risk-free, 25% contingency fee.">
+    <title>Cook County Property Tax Appeals | Risk-Free Tax Reductions</title>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "Cook County Tax Appeals LLC",
+      "description": "Expert property tax appeal services exclusively for Cook County, Illinois. We reduce unfair property tax assessments using proprietary technology and a 3-tier appeal strategy.",
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Cook County, Illinois"
+      },
+      "priceRange": "$0 Upfront (25% Contingency)",
+      "telephone": "(708) 888-8880",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "6600 College Drive, Suite 207",
+        "addressLocality": "Palos Heights",
+        "addressRegion": "IL",
+        "postalCode": "60463"
+      }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- GLOBAL & TYPOGRAPHY STYLES --- */
+        :root {
+            --primary-blue: #0B5984;
+            --secondary-blue: #0F6EA3;
+            --dark-navy: #161A22;
+            --text-gray: #2A2F36;
+            --light-gray: #59606C;
+            --bg-light: #F9FBFD;
+            --bg-alt: #EEF3F8;
+            --white: #FFFFFF;
+            --accent-red: #E53E3E;
+            --accent-green: #38A169;
+            --gold: #C8922C;
+            --border-light: #D8DEE6;
+            --shadow-sm: 0 3px 10px rgba(10, 35, 55, 0.08);
+            --shadow-md: 0 14px 28px rgba(10, 35, 55, 0.14);
+            --shadow-lg: 0 26px 52px rgba(10, 35, 55, 0.2);
+            --radius: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 22px;
+            --font-body: 'DM Sans', Arial, Helvetica, sans-serif;
+            --font-display: 'Fraunces', 'DM Sans', serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-gray);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background: radial-gradient(1200px circle at 85% -220px, rgba(11, 89, 132, 0.08), transparent 60%),
+              linear-gradient(180deg, #F7FAFD 0%, #EEF3F8 100%);
+        }
+
+        h1, h2, h3, h4 {
+            line-height: 1.2;
+            margin-top: 0;
+            color: var(--dark-navy);
+        }
+
+        h1, h2 {
+            font-family: var(--font-display);
+            letter-spacing: -0.015em;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .section-padding { padding: 80px 0; }
+
+        /* Unified Section Headers */
+        .section-title {
+            font-size: 36px;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 56px;
+            height: 3px;
+            margin-top: 10px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--primary-blue) 0%, var(--gold) 100%);
+        }
+
+        .text-center .section-title::after {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--light-gray);
+            max-width: 750px;
+            margin: 0 auto 50px auto;
+        }
+
+        /* Unified Buttons */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #073A57 100%);
+            color: var(--white);
+            padding: 14px 28px;
+            border-radius: var(--radius);
+            font-weight: 700;
+            transition: 0.2s;
+            border: 2px solid var(--primary-blue);
+            cursor: pointer;
+            display: inline-block;
+            font-size: 16px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(11, 89, 132, 0.18);
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #0c5f8d 0%, #073a57 100%);
+            border-color: #073A57;
+            transform: translateY(-2px);
+            box-shadow: 0 16px 28px rgba(11, 89, 132, 0.22);
+        }
+        .btn-secondary {
+            background: var(--secondary-blue);
+            color: var(--white);
+            padding: 14px 28px;
+            border-radius: var(--radius);
+            font-weight: 700;
+            transition: 0.2s;
+            border: 2px solid var(--secondary-blue);
+            cursor: pointer;
+            display: inline-block;
+            font-size: 16px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+        .btn-secondary:hover {
+            background: #0b4f7a;
+            border-color: #0b4f7a;
+            transform: translateY(-2px);
+        }
+        .btn-outline {
+            background: var(--white);
+            color: var(--primary-blue);
+            padding: 14px 28px;
+            border-radius: var(--radius);
+            font-weight: 700;
+            transition: 0.2s;
+            border: 2px solid var(--primary-blue);
+            cursor: pointer;
+            display: inline-block;
+            font-size: 16px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+        .btn-outline:hover { background: var(--primary-blue); color: var(--white); box-shadow: var(--shadow-md); }
+
+        /* Unified Cards */
+        .card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            border: 1px solid var(--border-light);
+            border-top: 4px solid transparent;
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-top-color: var(--primary-blue); }
+
+        /* --- HEADER --- */
+        header {
+            background: rgba(255, 255, 255, 0.92);
+            padding: 15px 0;
+            box-shadow: 0 10px 24px rgba(10, 35, 55, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: saturate(1.2) blur(10px);
+            border-bottom: 1px solid rgba(12, 36, 54, 0.08);
+        }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
+        .logo {
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--dark-navy);
+            line-height: 1.1;
+            font-family: var(--font-display);
+        }
+        .logo span { color: var(--primary-blue); }
+        .nav-links { display: flex; gap: 20px; align-items: center; font-weight: 600; font-size: 15px;}
+        .nav-links a:hover { color: var(--primary-blue); }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background:
+              radial-gradient(600px circle at 12% 8%, rgba(200, 146, 44, 0.14), transparent 58%),
+              linear-gradient(135deg, #d6e5f2 0%, #edf4fa 55%, #f9fbfe 100%);
+            padding: 60px 0 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before,
+        .hero::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(11, 89, 132, 0.08);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .hero::before {
+            width: 380px;
+            height: 380px;
+            top: -220px;
+            left: -160px;
+        }
+        .hero::after {
+            width: 260px;
+            height: 260px;
+            bottom: -160px;
+            right: -120px;
+        }
+        .hero .container { position: relative; z-index: 1; }
+        .hero h1 { font-size: 42px; color: var(--primary-blue); max-width: 900px; margin: 0 auto 30px auto; }
+        .trust-badge-center {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid var(--border-light);
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+        .trust-badge-center strong { color: var(--gold); margin-left: 5px; }
+
+        .search-bar-container {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 10px 10px 10px 25px;
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            border: 1.5px solid var(--border-light);
+            box-shadow: var(--shadow-md);
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+        }
+        .search-input { flex: 1; border: none; outline: none; font-size: 18px; background: transparent; font-family: var(--font-body); color: var(--text-gray); }
+        .or-text { font-weight: 700; color: var(--light-gray); font-size: 14px; margin: 0 10px; }
+
+        .how-it-works-row { display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 50px; flex-wrap: wrap; }
+        .step { display: flex; align-items: center; font-size: 16px; font-weight: 600; color: #2D3748; }
+        .step-number { background: var(--primary-blue); color: var(--white); border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; margin-right: 8px; font-size: 14px; box-shadow: var(--shadow-sm); }
+        .step-arrow { color: #A0AEC0; font-weight: bold; }
+
+        .hero-stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .hero-stat-card {
+            background: var(--white);
+            padding: 25px 20px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            border-top: 4px solid var(--primary-blue);
+            border: 1px solid var(--border-light);
+        }
+        .hero-stat-card h3 { font-size: 20px; color: var(--primary-blue); margin-bottom: 5px; }
+        .hero-stat-card p { font-size: 14px; color: var(--light-gray); margin: 0; }
+
+        /* --- WHY CHOOSE US --- */
+        .why-choose { background-color: var(--bg-light); }
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; text-align: left; }
+        .feature-card { padding: 40px 25px; display: flex; flex-direction: column; }
+        .icon-circle {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, rgba(11, 89, 132, 0.14), rgba(200, 146, 44, 0.18));
+            color: var(--primary-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .feature-card h3 { font-size: 20px; color: var(--primary-blue); margin-bottom: 15px; }
+        .feature-card p { font-size: 15px; color: var(--text-gray); margin: 0; flex-grow: 1; }
+        .tier-progression {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 5px;
+            margin-top: 15px;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            background: var(--bg-alt);
+            padding: 8px;
+            border-radius: 6px;
+        }
+
+        /* --- URGENT DEADLINES --- */
+        .deadline-section { background-color: var(--bg-alt); padding: 60px 0; }
+        .deadline-card {
+            background: var(--white);
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 50px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            border-left: 8px solid var(--accent-red);
+            text-align: center;
+            border-top: 1px solid var(--border-light);
+            border-right: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+        }
+        .alert-badge {
+            display: inline-flex;
+            align-items: center;
+            background: #FFF5F5;
+            color: #C53030;
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            border: 1px solid #FEB2B2;
+        }
+        .deadline-actions { display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap; margin-top: 30px; }
+        .btn-text-link { color: var(--text-gray); font-size: 16px; font-weight: 700; text-decoration: underline; padding: 14px 10px; transition: color 0.2s ease; display: inline-block; }
+        .btn-text-link:hover { color: var(--primary-blue); }
+
+        /* --- SERVICES SPLIT --- */
+        .services-section {
+            background:
+              radial-gradient(520px circle at 12% 10%, rgba(255, 255, 255, 0.12), transparent 62%),
+              linear-gradient(135deg, #0b5984 0%, #0a4a70 100%);
+            color: var(--white);
+            padding: 80px 0;
+        }
+        .services-section .section-title { color: var(--white); }
+        .services-section .section-title::after {
+            background: linear-gradient(90deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.5) 100%);
+        }
+        .services-section .section-subtitle { color: #E2E8F0; }
+        .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+        .service-card {
+            background: var(--white);
+            color: var(--dark-navy);
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            text-align: left;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--border-light);
+        }
+        .service-card h3 { font-size: 28px; color: var(--primary-blue); margin-bottom: 10px; border-bottom: 2px solid var(--bg-alt); padding-bottom: 15px; }
+        .service-card p.intro { font-weight: 700; font-size: 16px; }
+        .service-list { list-style: none; padding: 0; margin: 20px 0 30px 0; flex-grow: 1; }
+        .service-list li { margin-bottom: 10px; padding-left: 25px; position: relative; font-size: 15px; }
+        .service-list li::before { content: '✓'; color: var(--accent-green); position: absolute; left: 0; font-weight: bold; }
+
+        /* --- PROCESS --- */
+        .process-section { background-color: var(--bg-light); }
+        .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .process-step {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .process-step:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+        .process-icon { font-size: 40px; margin-bottom: 20px; }
+
+        /* --- RECENT WINS --- */
+        .wins-section { background-color: var(--bg-alt); }
+        .wins-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; text-align: left; margin-bottom: 40px; }
+        .win-card { padding: 35px 25px; border-top: 4px solid var(--accent-green); }
+        .win-card:hover { border-top-color: var(--accent-green); }
+        .win-location { font-size: 14px; color: var(--light-gray); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+        .win-type { font-size: 20px; color: var(--dark-navy); font-weight: 700; margin: 0 0 20px 0; padding-bottom: 15px; border-bottom: 1px solid var(--border-light); }
+        .win-stat-row { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 15px; }
+        .win-stat-value { font-weight: 700; color: var(--dark-navy); }
+        .win-stat-value.strike { text-decoration: line-through; color: #A0AEC0; font-weight: normal; }
+        .win-savings { background-color: #F0FFF4; border: 1px solid #C6F6D5; padding: 15px; border-radius: 8px; text-align: center; margin-top: 20px; }
+        .win-savings-label { font-size: 13px; color: #2F855A; font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+        .win-savings-amount { font-size: 32px; font-weight: 900; color: #276749; line-height: 1; }
+
+        /* --- TESTIMONIALS --- */
+        .testimonials-section { background-color: var(--bg-light); }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; text-align: left; }
+        .testimonial-card { padding: 40px 30px; position: relative; display: flex; flex-direction: column; }
+        .testimonial-card::before { content: '“'; position: absolute; top: 20px; right: 30px; font-size: 80px; color: #E2E8F0; font-family: Georgia, serif; line-height: 1; }
+        .stars { color: var(--gold); font-size: 20px; margin-bottom: 15px; letter-spacing: 2px; }
+        .quote-text { font-size: 16px; color: #2D3748; line-height: 1.6; font-style: italic; margin: 0 0 25px 0; position: relative; z-index: 1; flex-grow: 1; }
+        .client-info { display: flex; align-items: center; border-top: 1px solid #E2E8F0; padding-top: 20px; }
+        .client-avatar { width: 45px; height: 45px; background: var(--primary-blue); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; margin-right: 15px; }
+        .client-details h4 { margin: 0 0 3px 0; font-size: 16px; color: var(--dark-navy); }
+        .client-details p { margin: 0; font-size: 13px; color: var(--light-gray); }
+        .verified-badge { display: inline-flex; align-items: center; color: var(--accent-green); font-size: 12px; font-weight: 700; margin-top: 4px; }
+        .verified-badge svg { width: 14px; height: 14px; margin-right: 4px; fill: currentColor; }
+
+        /* --- FOOTER --- */
+        footer {
+            background: linear-gradient(180deg, #eef3f7 0%, #f9fbfd 100%);
+            color: var(--light-gray);
+            padding: 60px 0 30px 0;
+            font-size: 14px;
+            border-top: 1px solid var(--border-light);
+        }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer-logo { font-size: 20px; font-weight: 700; color: var(--primary-blue); margin-bottom: 15px; }
+        .footer-col h4 { color: var(--primary-blue); font-size: 16px; margin-bottom: 20px; }
+        .footer-col ul { list-style: none; padding: 0; margin: 0; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col ul li a:hover { color: var(--primary-blue); }
+        .footer-bottom { border-top: 1px solid var(--border-light); padding-top: 20px; text-align: center; color: var(--light-gray); }
+
+        @keyframes heroFadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .hero .container > * {
+                animation: heroFadeUp 0.65s ease both;
+            }
+            .hero .container > *:nth-child(1) { animation-delay: 0.05s; }
+            .hero .container > *:nth-child(2) { animation-delay: 0.1s; }
+            .hero .container > *:nth-child(3) { animation-delay: 0.15s; }
+            .hero .container > *:nth-child(4) { animation-delay: 0.2s; }
+            .hero .container > *:nth-child(5) { animation-delay: 0.25s; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+        }
+
+        /* --- RESPONSIVE SETTINGS --- */
+        @media (max-width: 1024px) {
+            .hero-stats-row, .features-grid, .process-grid, .wins-grid, .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+            .services-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero-stats-row, .features-grid, .process-grid, .wins-grid, .testimonials-grid, .footer-grid { grid-template-columns: 1fr; }
+            .search-bar-container { flex-direction: column; border-radius: 15px; padding: 15px; gap: 10px; }
+            .search-input { width: 100%; border-bottom: 1px solid #E2E8F0; padding-bottom: 10px; margin-bottom: 10px; }
+            .how-it-works-row { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .step-arrow { display: none; }
+            .deadline-actions { flex-direction: column; gap: 15px; }
+            .btn-primary, .btn-secondary, .btn-outline { width: 100%; box-sizing: border-box; text-align: center; }
+            .deadline-card { padding: 30px 20px; border-left-width: 6px; }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- ========== NAVBAR ========== -->
-  <header class="navbar" id="navbar">
-    <div class="navbar-inner">
-      <a href="https://www.cookcountytaxappeal.com/" class="navbar-logo">
-        <img src="CCTA.webp" alt="Cook County Tax Appeals" />
-      </a>
-      <button class="navbar-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="navbar-nav" id="navMenu">
-        <a href="https://www.cookcountytaxappeal.com/" class="nav-link">Home</a>
-        <a href="https://www.cookcountytaxappeal.com/property-tax-calculator" class="nav-link">Property Tax Calculator</a>
-        <a href="https://www.cookcountytaxappeal.com/cook-county-tax-appeal-about-us" class="nav-link">About Us</a>
-        <div class="nav-dropdown">
-          <button class="nav-link nav-link--dropdown">Services: Residential <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <div class="dropdown-menu">
-            <a href="https://www.cookcountytaxappeal.com/cook-county-tax-appeal-services-residential">Residential</a>
-            <a href="https://www.cookcountytaxappeal.com/cook-county-tax-appeal-services-commercial">Commercial</a>
-          </div>
+    <header>
+        <div class="container header-inner">
+            <div class="logo">COOK COUNTY<br><span>TAX APPEALS</span></div>
+            <nav class="nav-links">
+                <a href="#">Services</a>
+                <a href="#">Pricing</a>
+                <a href="#">FAQs</a>
+                <a href="https://www.cookcountytaxappeal.com/cook-county-property-tax-appeal-deadlines">Deadlines</a>
+                <a href="#" class="btn-primary" style="padding: 8px 20px;">Sign In</a>
+            </nav>
         </div>
-        <a href="https://www.cookcountytaxappeal.com/no-upfront-cost-tax-appeals" class="nav-link">Pricing</a>
-        <a href="https://www.cookcountytaxappeal.com/property-tax-appeal-blogs" class="nav-link">Blogs</a>
-        <a href="https://www.cookcountytaxappeal.com/cook-county-tax-appeal-faqs" class="nav-link">FAQs</a>
-        <a href="https://www.cookcountytaxappeal.com/cook-county-property-tax-appeal-deadlines" class="nav-link">Deadlines</a>
-      </nav>
-      <div class="navbar-auth">
-        <a href="https://www.cookcountytaxappeal.com/?auth=login" class="btn btn-signin">Sign In</a>
-        <a href="https://www.cookcountytaxappeal.com/appeal" class="btn btn-register">Register</a>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- ========== HERO SECTION ========== -->
-  <section class="hero-section hero-section--compact">
-    <div class="container">
-      <div class="hero-compact">
-        <div class="hero-compact-top">
-          <span class="hero-eyebrow">Residential Property Tax Appeals</span>
-          <span class="hero-subtext">Sign up in 2 minutes</span>
-        </div>
-        <h1>Cook County Residential Property Tax Appeal Services</h1>
-        <p class="hero-tagline">No upfront fees, ever. We only get paid if we lower your assessment.</p>
-        <div class="hero-compact-actions">
-          <div class="hero-cta-group">
-            <a href="https://www.cookcountytaxappeal.com/appeal?type=savings" class="btn btn-primary">Calculate Savings</a>
-            <a href="https://www.cookcountytaxappeal.com/appeal?type=exemption" class="btn btn-outline">Find Missing Exemptions</a>
-          </div>
-          <div class="hero-trust">
-            <span class="trust-chip">No upfront fees</span>
-            <span class="trust-chip">Attorney-led representation</span>
-            <span class="trust-chip">Data-driven analysis</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <main>
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="container">
+                <div class="trust-badge-center">
+                    BBB Accredited Business | <strong>A+ Rated</strong>
+                </div>
+                <h1 id="hero-heading">Lower Your Cook County Property Taxes—Completely Risk-Free</h1>
 
-  <!-- ========== INTRO / OVERVIEW SECTION ========== -->
-  <section class="section section--white">
-    <div class="container">
-      <h2>Cook County Residential Property Tax Appeal Services</h2>
-      <div class="intro-content">
-        <div class="intro-text">
-          <p>Cook County homeowners often pay higher property taxes than necessary because their homes are overassessed.</p>
-          <p>Property assessments are determined using mass appraisal systems, which means inaccuracies and outdated property data can sometimes lead to inflated valuations.</p>
-          <p>If your home is assessed above its true market value, you may qualify for a <a href="https://www.cookcountytaxappeal.com/property-tax-calculator">Cook County residential property tax appeal</a> that could lower your tax bill.</p>
-          <p>At Cook County Tax Appeal, our experienced attorneys and property tax professionals help homeowners challenge unfair property assessments and pursue tax reductions through a proven, data-driven appeal process.</p>
-          <a href="https://www.cookcountytaxappeal.com/cook-county-tax-appeal-faqs/Cook-County-Residential-Property-Tax-Appeal:-What-Homeowners-Need-to-Know" class="learn-more-link">What Is a Residential Property Tax Appeal in Cook County? &rarr;</a>
-        </div>
-        <aside class="intro-aside">
-          <div class="inline-cta">
-            <p>Start today with a free property tax evaluation</p>
-            <a href="https://www.cookcountytaxappeal.com/appeal" class="btn btn-primary">Get a Free Evaluation</a>
-            <p class="cta-subtext">to see if your home qualifies for a reduction</p>
-          </div>
-          <p class="intro-aside-note">We handle the entire appeal process from start to finish so homeowners can focus on their property while we work to reduce their tax burden.</p>
-        </aside>
-      </div>
-    </div>
-  </section>
+                <div class="search-bar-container">
+                    <input type="text" class="search-input" placeholder="🔍 Enter your property address or PIN..." aria-label="Enter property address or PIN">
+                    <span class="or-text">Find My</span>
+                    <button class="btn-primary" style="padding: 10px 24px;" aria-label="Find Savings">Savings</button>
+                    <span class="or-text">Or</span>
+                    <button class="btn-secondary" style="padding: 10px 24px;" aria-label="Find Exemptions">Exemptions</button>
+                </div>
 
-  <!-- ========== COMMON REASONS SECTION ========== -->
-  <section class="section section--gray">
-    <div class="container">
-      <h2>Common Reasons Homes Are Overassessed</h2>
-      <p class="section-intro">Many Cook County homeowners are surprised to learn that property assessments may not always reflect true market value. Common causes of over-assessment include:</p>
-      <div class="reasons-grid">
-        <div class="reason-card">
-          <h4>Incorrect Property Records</h4>
-          <p>Public records may contain inaccurate information such as square footage, number of rooms, or building characteristics.</p>
-        </div>
-        <div class="reason-card">
-          <h4>Comparable Homes Are Assessed Lower</h4>
-          <p>Homes with similar features in the same neighborhood may have lower assessed values.</p>
-        </div>
-        <div class="reason-card">
-          <h4>Market Value Declines</h4>
-          <p>Housing market fluctuations may cause a property's market value to fall below its assessed value.</p>
-        </div>
-        <div class="reason-card">
-          <h4>Property Condition Issues</h4>
-          <p>Structural problems, outdated features, or deferred maintenance can reduce a home's value.</p>
-        </div>
-        <div class="reason-card">
-          <h4>Automated Valuation Errors</h4>
-          <p>Assessment models used by the county may not fully reflect unique property characteristics.</p>
-        </div>
-      </div>
-      <p class="section-footer-note">If any of these situations apply to your home, you may qualify for a Cook County residential property tax appeal.</p>
-    </div>
-  </section>
+                <div class="how-it-works-row">
+                    <div class="step"><div class="step-number">1</div> Enter Address</div>
+                    <div class="step-arrow" aria-hidden="true">➔</div>
+                    <div class="step"><div class="step-number">2</div> Review Savings</div>
+                    <div class="step-arrow" aria-hidden="true">➔</div>
+                    <div class="step"><div class="step-number">3</div> Add Contact Details</div>
+                    <div class="step-arrow" aria-hidden="true">➔</div>
+                    <div class="step"><div class="step-number">4</div> Sign & Submit Appeal</div>
+                </div>
 
-  <!-- ========== RESIDENTIAL PROPERTIES SECTION ========== -->
-  <section class="section section--white">
-    <div class="container">
-      <div class="properties-header">
-        <div class="properties-text">
-          <h2>Residential Properties We Represent</h2>
-          <p>Our firm represents homeowners across Cook County who own various types of residential properties.</p>
-          <p>We handle appeals for:</p>
-        </div>
-        <div class="properties-media">
-          <div class="feature-image-wrap">
-            <img src="residentailHouse.jpg" alt="Residential home in Cook County" loading="lazy" />
-            <div class="feature-image-badge">
-              <span>Cook County Homeowners</span>
-              <strong>Free Evaluation Available</strong>
+                <div class="hero-stats-row">
+                    <div class="hero-stat-card">
+                        <h3>$0 Upfront Fees</h3>
+                        <p>You only pay if we win your appeal.</p>
+                    </div>
+                    <div class="hero-stat-card">
+                        <h3>70% Higher Success</h3>
+                        <p>Than the competition.</p>
+                    </div>
+                    <div class="hero-stat-card">
+                        <h3>25% of 1st-Year</h3>
+                        <p>You keep 100% of the savings in all future years.</p>
+                    </div>
+                    <div class="hero-stat-card">
+                        <h3>Takes Only Minutes</h3>
+                        <p>Discover tax savings and missing exemptions instantly.</p>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="property-cards">
-        <div class="property-card">Single-family homes</div>
-        <div class="property-card">Condominiums and townhomes</div>
-        <div class="property-card">Two-flats and three-flats</div>
-        <div class="property-card">Multi-unit residential properties</div>
-      </div>
-      <p>Whether you own your primary residence or an investment property, our team can review your assessment and determine whether an appeal may reduce your taxes.</p>
-    </div>
-  </section>
+        </section>
 
-  <!-- ========== APPEAL PROCESS SECTION ========== -->
-  <section class="section section--peach">
-    <div class="container">
-      <h2>Our Cook County Property Tax Appeal Process</h2>
-      <p class="section-intro">We have developed a streamlined process that allows homeowners to start an appeal quickly while ensuring every case is supported by strong evidence.</p>
-      <div class="process-steps">
-        <div class="process-step">
-          <div class="step-number">1</div>
-          <div class="step-content">
-            <h3>Free Property Assessment Review</h3>
-            <p>We analyze your property's assessed value and compare it to similar homes in your area.</p>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-number">2</div>
-          <div class="step-content">
-            <h3>Comparable Sales Analysis</h3>
-            <p>Our team reviews recent market sales to determine whether your property has been overvalued.</p>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-number">3</div>
-          <div class="step-content">
-            <h3>Evidence Preparation</h3>
-            <p>We compile supporting documentation including comparable properties, market data, and assessment discrepancies.</p>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-number">4</div>
-          <div class="step-content">
-            <h3>Filing the Appeal</h3>
-            <p>Our attorneys file the appeal with the appropriate authority before the township deadline.</p>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-number">5</div>
-          <div class="step-content">
-            <h3>Representation Before Appeal Boards</h3>
-            <p>We represent homeowners before:</p>
-            <ul>
-              <li>Cook County Assessor's Office</li>
-              <li>Cook County Board of Review</li>
-              <li>Illinois Property Tax Appeal Board (PTAB)</li>
-            </ul>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-number">6</div>
-          <div class="step-content">
-            <h3>Reduction in Assessed Value</h3>
-            <p>If the appeal is successful, the assessed value of the property is reduced, lowering the tax bill.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <section class="why-choose section-padding text-center" aria-labelledby="why-choose-heading">
+            <div class="container">
+                <h2 id="why-choose-heading" class="section-title">Why Choose Us for Your Cook County Property Tax Reduction?</h2>
+                <p class="section-subtitle">We don't just file paperwork. We leverage advanced technology and aggressive legal strategies to ensure you never pay a penny more than your fair share.</p>
 
-  <!-- ========== EXEMPTIONS SECTION ========== -->
-  <section class="section section--white">
-    <div class="container">
-      <div class="exemptions-block">
-        <h3>Many homeowners miss valuable exemptions that can reduce property taxes.</h3>
-        <p>Our team also reviews whether homeowners qualify for exemptions such as:</p>
-        <div class="exemptions-grid">
-          <div class="exemption-card">Homeowner Exemption</div>
-          <div class="exemption-card">Senior Citizen Exemption</div>
-          <div class="exemption-card">Senior Freeze Exemption</div>
-          <div class="exemption-card">Disabled Persons Exemption</div>
-          <div class="exemption-card">Disabled Veterans Exemption</div>
-        </div>
-        <p>Combining exemptions with a property tax appeal can significantly reduce annual property taxes.</p>
-        <a href="https://www.cookcountytaxappeal.com/property-tax-appeal-blogs/Cook-County-Homestead-Exemption-Guide-for-2026:-How-to-Apply,-Qualify,-and-Check-Your-Status" class="learn-more-link">Cook County Homestead Exemptions Guide &rarr;</a>
-      </div>
-    </div>
-  </section>
+                <div class="features-grid">
+                    <article class="card feature-card">
+                        <div class="icon-circle" role="img" aria-label="Money Bag">💰</div>
+                        <h3>Risk-Free 25% Contingency Fee</h3>
+                        <p>We operate strictly on a contingency basis. Our fee is just 25% of your first-year tax savings—if we don’t win, you pay $0. You keep 100% of your tax savings for all future years.</p>
+                    </article>
 
-  <!-- ========== WHY CHOOSE US SECTION ========== -->
-  <section class="section section--primary value-section">
-    <div class="container">
-      <span class="section-eyebrow">Trusted, Risk-Free Representation</span>
-      <h2>No Savings, No Fee — Why Homeowners Choose Cook County Tax Appeal</h2>
-      <p class="section-intro section-intro--light">We focus exclusively on property tax appeals, combining local Cook County expertise with attorney-led representation. Our pricing is transparent and risk-free, so you only pay when we deliver real savings.</p>
-      <div class="benefits-grid">
-        <div class="benefit-card">
-          <div class="benefit-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <h3>Local Cook County Expertise</h3>
-          <p>Our team understands township reassessment cycles, filing deadlines, and the appeal procedures used by Cook County agencies.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-          </div>
-          <h3>Attorney-Led Representation</h3>
-          <p>Your appeal is handled by experienced attorneys and property tax professionals.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-          </div>
-          <h3>Data-Driven Analysis</h3>
-          <p>We use advanced property data and comparable sales analysis to build strong appeal cases.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </div>
-          <h3>No Savings, No Fee</h3>
-          <p>No upfront fees, no hidden costs, and no payment unless we reduce your property taxes.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+                    <article class="card feature-card">
+                        <div class="icon-circle" role="img" aria-label="Briefcase">💼</div>
+                        <h3>Dual Attorney & CPA Expertise</h3>
+                        <p>Every appeal benefits from the rigorous oversight of both an experienced Tax Attorney and a CPA. This combined scrutiny ensures your submission is flawlessly reviewed.</p>
+                    </article>
 
-  <!-- ========== TOWNSHIPS SECTION ========== -->
-  <section class="section section--gray">
-    <div class="container">
-      <h2>Cook County Townships We Serve</h2>
-      <p class="section-intro">We help homeowners file property tax appeals throughout Cook County, including:</p>
-      <div class="townships-grid">
-        <span class="township-tag">Barrington</span>
-        <span class="township-tag">Berwyn</span>
-        <span class="township-tag">Bloom</span>
-        <span class="township-tag">Bremen</span>
-        <span class="township-tag">Calumet</span>
-        <span class="township-tag">Cicero</span>
-        <span class="township-tag">Elk Grove</span>
-        <span class="township-tag">Evanston</span>
-        <span class="township-tag">Hanover</span>
-        <span class="township-tag">Hyde Park</span>
-        <span class="township-tag">Jefferson</span>
-        <span class="township-tag">Lake</span>
-        <span class="township-tag">Lake View</span>
-        <span class="township-tag">Lemont</span>
-        <span class="township-tag">Leyden</span>
-        <span class="township-tag">Lyons</span>
-        <span class="township-tag">Maine</span>
-        <span class="township-tag">New Trier</span>
-        <span class="township-tag">Niles</span>
-        <span class="township-tag">North Chicago</span>
-        <span class="township-tag">Northfield</span>
-        <span class="township-tag">Norwood Park</span>
-        <span class="township-tag">Oak Park</span>
-        <span class="township-tag">Orland</span>
-        <span class="township-tag">Palatine</span>
-        <span class="township-tag">Palos</span>
-        <span class="township-tag">Proviso</span>
-        <span class="township-tag">Rich</span>
-        <span class="township-tag">River Forest</span>
-        <span class="township-tag">Riverside</span>
-        <span class="township-tag">Rogers Park</span>
-        <span class="township-tag">Schaumburg</span>
-        <span class="township-tag">South Chicago</span>
-        <span class="township-tag">Stickney</span>
-        <span class="township-tag">Thornton</span>
-        <span class="township-tag">West</span>
-        <span class="township-tag">Wheeling</span>
-        <span class="township-tag">Worth</span>
-      </div>
-      <p class="section-footer-note">If you live in any of these townships, we can help you file a Cook County residential property tax appeal.</p>
-      <a href="https://www.cookcountytaxappeal.com/cook-county-property-tax-appeal-deadlines" class="learn-more-link">View Appeal Deadlines &rarr;</a>
-    </div>
-  </section>
+                    <article class="card feature-card">
+                        <div class="icon-circle" role="img" aria-label="Computer">💻</div>
+                        <h3>Advanced Tax Savings Technology</h3>
+                        <p>Our exclusive digital analyzer scans thousands of data points to instantly identify missing exemptions and uncover deeper assessment errors to maximize your savings.</p>
+                    </article>
 
-  <!-- ========== FINAL CTA SECTION ========== -->
-  <section class="section section--cta">
-    <div class="container">
-      <h2>Start Your Free Cook County Residential Property Tax Review</h2>
-      <p>If your home may be overassessed, a property tax appeal could reduce your tax bill and save money for years to come.</p>
-      <p>Submit your property address today to receive a free Cook County residential property tax evaluation.</p>
-      <p>Our team will review your assessment, analyze comparable homes, and determine whether your property qualifies for a tax reduction.</p>
-      <a href="https://www.cookcountytaxappeal.com/appeal" class="btn btn-primary btn-lg">Start Your Free Review</a>
-    </div>
-  </section>
+                    <article class="card feature-card">
+                        <div class="icon-circle" role="img" aria-label="Scales">⚖️</div>
+                        <h3>Relentless 3-Tier Appeal Strategy</h3>
+                        <p>We aggressively fight for your savings at all three levels: the Cook County Assessor, the Cook County Board of Review, and the Illinois Property Tax Appeal Board.</p>
+                        <div class="tier-progression">Assessor <span class="tier-arrow">➔</span> Board of Review <span class="tier-arrow">➔</span> PTAB</div>
+                    </article>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-top">
-        <!-- Column 1: Brand -->
-        <div class="footer-col footer-brand">
-          <a href="https://www.cookcountytaxappeal.com/" class="footer-logo">
-            <img src="CCTA.webp" alt="Cook County Tax Appeals" />
-          </a>
-          <p>Request a free property tax assessment today to determine if you qualify for a property tax reduction. Our experienced team will manage the entire appeal process.</p>
-          <div class="footer-search">
-            <input type="text" placeholder="Enter your property address or PIN" class="footer-search-input" />
-            <a href="https://www.cookcountytaxappeal.com/appeal" class="footer-search-btn">Calculate My Savings</a>
-            <button class="footer-search-icon" aria-label="Search">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            </button>
-          </div>
-        </div>
+                    <article class="card feature-card">
+                        <div class="icon-circle" role="img" aria-label="Map Pin">📍</div>
+                        <h3>Exclusive Cook County Expertise</h3>
+                        <p>We focus 100% of our efforts strictly on Cook County real estate. Our highly localized knowledge allows us to craft the most convincing appeal packages.</p>
+                    </article>
 
-        <!-- Column 2: Company -->
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="https://www.cookcountytaxappeal.com/cook-county-tax-appeal-services-residential">Services Residential</a></li>
-            <li><a href="https://www.cookcountytaxappeal.com/cook-county-tax-appeal-services-commercial">Services Commercial</a></li>
-            <li><a href="https://www.cookcountytaxappeal.com/no-upfront-cost-tax-appeals">Pricing</a></li>
-            <li><a href="https://www.cookcountytaxappeal.com/property-tax-appeal-blogs">Blogs</a></li>
-            <li><a href="https://www.cookcountytaxappeal.com/contact">Contact Us</a></li>
-            <li><a href="https://www.cookcountytaxappeal.com/cook-county-property-tax-appeal-deadlines">Deadlines</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 3: Policies -->
-        <div class="footer-col">
-          <h4>Policies &amp; Agreements</h4>
-          <ul>
-            <li><a href="https://www.cookcountytaxappeal.com/privacy-policy">Privacy Policy</a></li>
-            <li><a href="https://www.cookcountytaxappeal.com/terms-service">Terms of Service</a></li>
-            <li><a href="https://www.cookcountytaxappeal.com/disclaimer">Disclaimer</a></li>
-            <li><a href="https://www.cookcountytaxappeal.com/sms-policy">SMS Policy</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 4: Contact + Social -->
-        <div class="footer-col">
-          <div class="footer-social-header">
-            <span>Follow Us</span>
-            <div class="footer-social">
-              <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-              <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-              <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
-              <a href="#" aria-label="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                    <article class="card feature-card">
+                        <div class="icon-circle" role="img" aria-label="Mobile Phone">📱</div>
+                        <h3>100% Transparent Appeal Process</h3>
+                        <p>Never wonder about the status of your tax appeal. Our secure client portal provides real-time updates from your initial filing to the final reduction decision.</p>
+                    </article>
+                </div>
             </div>
-          </div>
-          <h4>Contact Us</h4>
-          <ul class="footer-contact">
-            <li>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              <a href="mailto:info@cookcountytaxappeal.com">info@cookcountytaxappeal.com</a>
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-              <a href="tel:+17088888880">(708) 888-8880</a>
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <a href="https://www.google.com/maps/search/?api=1&query=6600+College+Drive+Suite+207+Palos+Heights+IL+60463">6600 College Drive, Suite 207<br/>Palos Heights, IL 60463</a>
-            </li>
-          </ul>
+        </section>
+
+        <section class="deadline-section" aria-labelledby="deadline-heading">
+            <div class="container">
+                <article class="deadline-card">
+                    <div class="alert-badge" role="img" aria-label="Hourglass Icon indicating urgency">
+                        ⏳ Strict 30-Day Appeal Windows
+                    </div>
+                    <h2 id="deadline-heading" class="section-title">Don't Miss Your Cook County Tax Appeal Deadline</h2>
+                    <p class="section-subtitle">
+                        Property tax appeals in Cook County operate on strict, rolling 30-day deadlines. Once your specific township's window closes, <strong>you lose your right to appeal your property taxes for the entire year.</strong>
+                    </p>
+                    <div class="deadline-actions">
+                        <a href="#" class="btn-secondary" title="Enter your address to find your deadline">📍 Check Deadline by Address</a>
+                        <a href="#" class="btn-primary" title="Pre-Register Your Property for Tax Appeal">Pre-Register Property</a>
+                        <a href="https://www.cookcountytaxappeal.com/cook-county-property-tax-appeal-deadlines" class="btn-text-link" title="Check Township Deadlines">View Township Calendar</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="services-section text-center" aria-labelledby="services-heading">
+            <div class="container">
+                <h2 id="services-heading" class="section-title">Reduce Your Property Taxes. Pay Only If We Win.</h2>
+                <p class="section-subtitle">No upfront fees. No risk. Just strategic, data-driven results tailored to your property type.</p>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Residential Property Tax Appeals</h3>
+                        <p class="intro">Unfair assessment? We handle everything.</p>
+                        <p>From single-family homes to condos and multi-unit properties, our team manages the full appeal process to secure a fair valuation and maximize your family's savings.</p>
+                        <ul class="service-list">
+                            <li>In-depth valuation to find hidden savings</li>
+                            <li>Exemption review & optimization</li>
+                            <li>Deadline & paperwork management</li>
+                            <li>Evidence-based customized appeals</li>
+                        </ul>
+                        <a href="#" class="btn-outline">Start Residential Appeal</a>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Commercial Property Tax Appeals</h3>
+                        <p class="intro">Overpaying? We build defensible cases.</p>
+                        <p>Retail centers, warehouses, apartment buildings, mixed-use properties—we represent commercial owners with precision, utilizing advanced income-approach methodologies.</p>
+                        <ul class="service-list">
+                            <li>Advanced commercial property analysis</li>
+                            <li>Technology-driven case preparation</li>
+                            <li>Direct representation before the Assessor</li>
+                            <li>Transparent case tracking & reporting</li>
+                        </ul>
+                        <a href="#" class="btn-outline">Start Commercial Appeal</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="process-section section-padding" aria-labelledby="process-heading">
+            <div class="container">
+                <h2 id="process-heading" class="section-title text-center">Our Simple, Risk-Free Process</h2>
+                <p class="section-subtitle text-center">We simplify the appeal process so you can focus on what matters while we focus on lowering your tax burden.</p>
+
+                <div class="process-grid">
+                    <div class="process-step">
+                        <div class="process-icon" role="img" aria-label="Magnifying Glass">🔍</div>
+                        <h3 style="color: var(--primary-blue); font-size: 22px;">1. Free Tech-Driven Evaluation</h3>
+                        <p style="color: var(--text-gray); font-size: 15px;">Our proprietary digital property analyzer uses real-time assessment data and advanced algorithms to instantly uncover savings opportunities and missing exemptions.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-icon" role="img" aria-label="Document">📄</div>
+                        <h3 style="color: var(--primary-blue); font-size: 22px;">2. Comprehensive Processing</h3>
+                        <p style="color: var(--text-gray); font-size: 15px;">We gather evidence, build reports, and file your appeal directly with the Assessor, Board of Review, and PTAB—handling every legal deadline on your behalf.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-icon" role="img" aria-label="Trending Chart">📈</div>
+                        <h3 style="color: var(--primary-blue); font-size: 22px;">3. Track Real-Time Results</h3>
+                        <p style="color: var(--text-gray); font-size: 15px;">Stay informed via email, SMS, and our secure client portal. You will know exactly where your case stands from the day we file until your final tax reduction is secured.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wins-section section-padding text-center" aria-labelledby="wins-heading">
+            <div class="container">
+                <h2 id="wins-heading" class="section-title">Recent Cook County Tax Reductions</h2>
+                <p class="section-subtitle">See how our relentless appeal strategy translates into actual dollars saved for our clients. Below is just a small sample of our recent victories across Cook County.</p>
+
+                <div class="wins-grid">
+                    <article class="card win-card">
+                        <div class="win-location">📍 Orland Park Township</div>
+                        <h3 class="win-type">Single-Family Home</h3>
+                        <div class="win-stat-row"><span class="win-stat-label">Initial Assessment:</span><span class="win-stat-value strike">$520,000</span></div>
+                        <div class="win-stat-row"><span class="win-stat-label">Final Valuation:</span><span class="win-stat-value">$455,000</span></div>
+                        <div class="win-stat-row"><span class="win-stat-label">Appeal Level:</span><span class="win-stat-value">Assessor</span></div>
+                        <div class="win-savings">
+                            <div class="win-savings-label">1st-Year Tax Savings</div>
+                            <div class="win-savings-amount">$1,850</div>
+                        </div>
+                    </article>
+
+                    <article class="card win-card">
+                        <div class="win-location">📍 Schaumburg Township</div>
+                        <h3 class="win-type">Commercial Retail Plaza</h3>
+                        <div class="win-stat-row"><span class="win-stat-label">Initial Assessment:</span><span class="win-stat-value strike">$1.2M</span></div>
+                        <div class="win-stat-row"><span class="win-stat-label">Final Valuation:</span><span class="win-stat-value">$950,000</span></div>
+                        <div class="win-stat-row"><span class="win-stat-label">Appeal Level:</span><span class="win-stat-value">Board of Review</span></div>
+                        <div class="win-savings">
+                            <div class="win-savings-label">1st-Year Tax Savings</div>
+                            <div class="win-savings-amount">$8,420</div>
+                        </div>
+                    </article>
+
+                    <article class="card win-card">
+                        <div class="win-location">📍 Lake View Township</div>
+                        <h3 class="win-type">Multi-Unit Condo Bldg</h3>
+                        <div class="win-stat-row"><span class="win-stat-label">Initial Assessment:</span><span class="win-stat-value strike">$880,000</span></div>
+                        <div class="win-stat-row"><span class="win-stat-label">Final Valuation:</span><span class="win-stat-value">$760,000</span></div>
+                        <div class="win-stat-row"><span class="win-stat-label">Appeal Level:</span><span class="win-stat-value">PTAB</span></div>
+                        <div class="win-savings">
+                            <div class="win-savings-label">1st-Year Tax Savings</div>
+                            <div class="win-savings-amount">$3,200</div>
+                        </div>
+                    </article>
+                </div>
+                <a href="#" class="btn-primary">See What You Could Save</a>
+            </div>
+        </section>
+
+        <section class="testimonials-section section-padding text-center" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <h2 id="testimonials-heading" class="section-title">What Cook County Property Owners Are Saying</h2>
+                <p class="section-subtitle">Don't just take our word for it. Join the <strong>countless</strong> Cook County homeowners and investors who have successfully lowered their tax bills with our risk-free approach.</p>
+
+                <div class="testimonials-grid">
+                    <article class="card testimonial-card">
+                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <p class="quote-text">"I always thought appealing property taxes was a scam or just too much paperwork to bother with. I typed my address in, answered a few questions, and they handled literally everything else. They saved us over $2,100 on our first try."</p>
+                        <div class="client-info">
+                            <div class="client-avatar">SM</div>
+                            <div class="client-details">
+                                <h4>S.M.</h4>
+                                <p>Homeowner, Palatine Township</p>
+                                <div class="verified-badge">
+                                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                    Verified Client
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card testimonial-card">
+                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <p class="quote-text">"The 25% contingency fee is exactly as advertised. I didn't pay a single dime upfront. When we won at the Board of Review, their cut was totally fair, and now I get to keep 100% of my savings for the next two years. A total no-brainer."</p>
+                        <div class="client-info">
+                            <div class="client-avatar">DR</div>
+                            <div class="client-details">
+                                <h4>D.R.</h4>
+                                <p>Property Investor, Lake View</p>
+                                <div class="verified-badge">
+                                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                    Verified Client
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card testimonial-card">
+                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <p class="quote-text">"I tried using a different lawyer years ago and I never knew what was going on. With Cook County Tax Appeals, their client portal is amazing. I got real-time updates when it was filed, escalated, and finally approved. Highly professional team."</p>
+                        <div class="client-info">
+                            <div class="client-avatar">MT</div>
+                            <div class="client-details">
+                                <h4>M.T.</h4>
+                                <p>Homeowner, Oak Park Township</p>
+                                <div class="verified-badge">
+                                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                    Verified Client
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">COOK COUNTY TAX APPEALS</div>
+                    <p>Expert property tax appeal services exclusively for Cook County, Illinois. Reduce your property taxes, pay only if we win.</p>
+                    <p>📧 info@cookcountytaxappeal.com<br>📞 (708) 888-8880</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Blog News & Tips</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Residential Appeals</a></li>
+                        <li><a href="#">Commercial Appeals</a></li>
+                        <li><a href="#">Exemption Checks</a></li>
+                        <li><a href="#">Tax Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">SMS Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cook County Tax Appeals LLC. All rights reserved. 6600 College Drive, Suite 207, Palos Heights, IL 60463</p>
+            </div>
         </div>
-      </div>
+    </footer>
 
-      <div class="footer-bottom">
-        <p>&copy; cook county tax appeal llc. All rights reserved</p>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Mobile nav toggle
-    const toggle = document.getElementById('navToggle');
-    const menu = document.getElementById('navMenu');
-    if (toggle && menu) {
-      toggle.addEventListener('click', () => {
-        menu.classList.toggle('open');
-        toggle.classList.toggle('active');
-      });
-    }
-    // Dropdown
-    document.querySelectorAll('.nav-dropdown > button').forEach(btn => {
-      btn.addEventListener('click', e => {
-        e.currentTarget.parentElement.classList.toggle('open');
-      });
-    });
-    // Close dropdown on outside click
-    document.addEventListener('click', e => {
-      document.querySelectorAll('.nav-dropdown').forEach(dd => {
-        if (!dd.contains(e.target)) dd.classList.remove('open');
-      });
-    });
-  </script>
 </body>
 </html>

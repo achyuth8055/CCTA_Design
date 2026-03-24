@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Check Your Cook County Property Tax Savings | Appeal Page</title>
+  <meta name="description" content="Check your Cook County property tax savings and discover missing exemptions in minutes. Free attorney-led review." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=4" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="https://www.cookcountytaxappeal.com/" class="navbar-logo">
+          <img src="CCTA.webp" alt="Cook County Tax Appeals" />
+        </a>
+        <button class="navbar-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar-nav" id="navMenu">
+          <a href="https://www.cookcountytaxappeal.com/" class="nav-link">Home</a>
+          <a href="https://www.cookcountytaxappeal.com/property-tax-calculator" class="nav-link">Tax Calculator</a>
+          <a href="https://www.cookcountytaxappeal.com/cook-county-tax-appeal-about-us" class="nav-link">About Us</a>
+          <a href="https://www.cookcountytaxappeal.com/cook-county-tax-appeal-faqs" class="nav-link">FAQs</a>
+          <a href="https://www.cookcountytaxappeal.com/cook-county-property-tax-appeal-deadlines" class="nav-link">Deadlines</a>
+        </nav>
+        <div class="navbar-auth">
+          <a href="https://www.cookcountytaxappeal.com/?auth=login" class="btn btn-signin">Sign In</a>
+          <a href="https://www.cookcountytaxappeal.com/appeal" class="btn btn-register">Register</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== MAIN: GOOGLE-STYLE CENTERED SEARCH ========== -->
+  <main class="main-content">
+    <!-- <div class="hero-logo-mark" aria-hidden="true">
+      <img src="CCTA.webp" alt="" />
+    </div> -->
+
+    <h1 class="hero-heading">Check Your Property Tax Savings<br/><span class="hero-heading-accent">&amp; Discover Missing Exemptions</span></h1>
+    <p class="hero-subtitle">Appeal your property taxes or get a refund for missing exemptions from prior years in 5 simple steps.</p>
+
+    <div class="search-container">
+      <div class="search-step-label">
+        <span class="step-number">1</span>
+        <span>Property Address</span>
+      </div>
+      <div class="search-box-wrap">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input id="addressInput" class="search-input" type="text" placeholder="Enter your property address or PIN" autocomplete="off" />
+      </div>
+      <div class="action-buttons">
+        <span class="action-label">Find My</span>
+        <a href="https://www.cookcountytaxappeal.com/appeal?type=savings" class="btn btn-primary">Savings</a>
+        <span class="action-label">Or</span>
+        <a href="https://www.cookcountytaxappeal.com/appeal?type=exemption" class="btn btn-outline">Exemptions</a>
+      </div>
+    </div>
+
+    <div class="trust-badges">
+      <div class="badge-item">
+        <svg class="badge-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>No upfront fees</span>
+      </div>
+      <div class="badge-item">
+        <svg class="badge-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <span>Attorney-led representation</span>
+      </div>
+      <div class="badge-item">
+        <svg class="badge-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        <span>Data-driven analysis</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- ========== MINIMAL FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-row">
+        <span class="footer-copy">&copy; Cook County Tax Appeal LLC</span>
+        <nav class="footer-links">
+          <a href="https://www.cookcountytaxappeal.com/privacy-policy">Privacy</a>
+          <a href="https://www.cookcountytaxappeal.com/terms-service">Terms</a>
+          <a href="https://www.cookcountytaxappeal.com/disclaimer">Disclaimer</a>
+          <a href="https://www.cookcountytaxappeal.com/contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('navMenu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+      });
+    }
+  </script>
+</body>
+</html>
